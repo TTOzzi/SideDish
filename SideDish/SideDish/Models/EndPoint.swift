@@ -24,7 +24,7 @@ struct EndPoint: RequestProviding {
             }
         }
         
-        var category: String {
+        var keyword: String {
             switch self {
             case .main:
                 return "메인요리"

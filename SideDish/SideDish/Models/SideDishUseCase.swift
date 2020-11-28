@@ -8,13 +8,18 @@
 import Combine
 import Foundation
 
-protocol SideDishUseCaseType {
-    func load(endPoint: EndPoint) -> AnyPublisher<SideDishSection, Never>
+enum UseCaseError: Error {
+    case decodeError
+    case networkError(message: String)
 }
 
-struct SideDishSection: Identifiable {
+protocol SideDishUseCaseType {
+    func load(endPoint: EndPoint) -> AnyPublisher<SideDishCategory, UseCaseError>
+}
+
+struct SideDishCategory: Identifiable {
     let id = UUID()
-    let category: String
+    let keyword: String
     let title: String
     let data: [SideDish]
 }
@@ -22,20 +27,26 @@ struct SideDishSection: Identifiable {
 struct SideDishUseCase: SideDishUseCaseType {
     private let networkService: NetworkServiceType
     
-    init(networkService: NetworkServiceType) {
+    init(networkService: NetworkServiceType = NetworkService()) {
         self.networkService = networkService
     }
     
-    func load(endPoint: EndPoint) -> AnyPublisher<SideDishSection, Never> {
+    func load(endPoint: EndPoint) -> AnyPublisher<SideDishCategory, UseCaseError> {
         return networkService
             .request(with: endPoint)
             .decode(type: SideDishResponse.self, decoder: JSONDecoder())
             .map {
-                SideDishSection(category: endPoint.path.category,
+                SideDishCategory(keyword: endPoint.path.keyword,
                                 title: endPoint.path.title,
                                 data: $0.body)
             }
-            .replaceError(with: SideDishSection(category: "", title: "", data: []))
+            .mapError{ error -> UseCaseError in
+                if let networkError = error as? NetworkError {
+                    return .networkError(message: networkError.localizedDescription)
+                }
+                
+                return .decodeError
+            }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
