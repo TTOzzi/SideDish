@@ -16,6 +16,7 @@
 		44BE6F322572066B00BF8151 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BE6F312572066B00BF8151 /* Color+Extensions.swift */; };
 		44E47131257208BE00FAB924 /* TextModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E47130257208BE00FAB924 /* TextModifiers.swift */; };
 		44E4713525720C7B00FAB924 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4713425720C7B00FAB924 /* Font+Extensions.swift */; };
+		44E4713D25720EA500FAB924 /* SideDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4713C25720EA500FAB924 /* SideDish.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		44BE6F312572066B00BF8151 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		44E47130257208BE00FAB924 /* TextModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifiers.swift; sourceTree = "<group>"; };
 		44E4713425720C7B00FAB924 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		44E4713C25720EA500FAB924 /* SideDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDish.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				44BE6F192571FC4200BF8151 /* ContentView.swift */,
 				44BE6F272571FE4200BF8151 /* SideDishRow.swift */,
 				44BE6F2A2572035400BF8151 /* Badge.swift */,
+				44E4713B25720E8B00FAB924 /* Models */,
 				44E4712F257208B400FAB924 /* Modifiers */,
 				44BE6F352572070500BF8151 /* Extensions */,
 				44BE6F1B2571FC4300BF8151 /* Assets.xcassets */,
@@ -98,6 +101,14 @@
 				44E47130257208BE00FAB924 /* TextModifiers.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		44E4713B25720E8B00FAB924 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				44E4713C25720EA500FAB924 /* SideDish.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 				44E4713525720C7B00FAB924 /* Font+Extensions.swift in Sources */,
 				44BE6F2B2572035400BF8151 /* Badge.swift in Sources */,
 				44BE6F282571FE4200BF8151 /* SideDishRow.swift in Sources */,
+				44E4713D25720EA500FAB924 /* SideDish.swift in Sources */,
 				44BE6F182571FC4200BF8151 /* SideDishApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
