@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44988C4D257225EF00B5ADD5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44988C4C257225EF00B5ADD5 /* NetworkService.swift */; };
 		44BE6F182571FC4200BF8151 /* SideDishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BE6F172571FC4200BF8151 /* SideDishApp.swift */; };
 		44BE6F1C2571FC4300BF8151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44BE6F1B2571FC4300BF8151 /* Assets.xcassets */; };
 		44BE6F1F2571FC4300BF8151 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44BE6F1E2571FC4300BF8151 /* Preview Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44988C4C257225EF00B5ADD5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		44BE6F142571FC4200BF8151 /* SideDish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideDish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44BE6F172571FC4200BF8151 /* SideDishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishApp.swift; sourceTree = "<group>"; };
 		44BE6F1B2571FC4300BF8151 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				44E4713C25720EA500FAB924 /* SideDish.swift */,
+				44988C4C257225EF00B5ADD5 /* NetworkService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44988C4D257225EF00B5ADD5 /* NetworkService.swift in Sources */,
 				44E47144257211FC00FAB924 /* SideDishList.swift in Sources */,
 				44E47131257208BE00FAB924 /* TextModifiers.swift in Sources */,
 				44BE6F322572066B00BF8151 /* Color+Extensions.swift in Sources */,
