@@ -11,7 +11,13 @@ import SwiftUI
 struct SideDishApp: App {
     var body: some Scene {
         WindowGroup {
-            SideDishList()
+            VStack {
+                Rectangle()
+                    .foregroundColor(.clear)
+                    .ignoresSafeArea(.all, edges: .top)
+                    .frame(height: 0)
+                SideDishList()
+            }
         }
     }
 }
