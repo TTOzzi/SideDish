@@ -11,19 +11,19 @@ import Combine
 
 final class SideDishUseCaseTests: XCTestCase {
     private var subscriptions: Set<AnyCancellable> = []
-    private let response = SideDishResponse(
-        body: [SideDish(detailHash: "test",
-                        imageURL: "test",
-                        title: "test",
-                        description: "test",
-                        normalPrice: nil,
-                        salePrice: "test",
-                        badge: nil)]
-    )
 
     func test_load_success() {
         let expectation = XCTestExpectation()
         defer { wait(for: [expectation], timeout: 3) }
+        let response = SideDishResponse(
+            body: [SideDish(detailHash: "test",
+                            imageURL: "test",
+                            title: "test",
+                            description: "test",
+                            normalPrice: nil,
+                            salePrice: "test",
+                            badge: nil)]
+        )
         let useCase = SideDishUseCase(networkService: MockSuccessNetworkService(response: response))
         useCase.load(endPoint: .init(path: .main))
             .map(\.data)
@@ -35,7 +35,7 @@ final class SideDishUseCaseTests: XCTestCase {
                     expectation.fulfill()
                 }
             } receiveValue: { data in
-                XCTAssertEqual(data, self.response.body)
+                XCTAssertEqual(data, response.body)
             }
             .store(in: &subscriptions)
     }
