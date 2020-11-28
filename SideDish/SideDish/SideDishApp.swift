@@ -11,13 +11,8 @@ import SwiftUI
 struct SideDishApp: App {
     var body: some Scene {
         WindowGroup {
-            VStack {
-                Rectangle()
-                    .foregroundColor(.clear)
-                    .ignoresSafeArea(.all, edges: .top)
-                    .frame(height: 0)
-                SideDishList()
-            }
+            SideDishList()
+                .paddingStatusBar()
         }
     }
 }
