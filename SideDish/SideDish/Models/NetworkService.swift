@@ -9,12 +9,17 @@ import Combine
 import Foundation
 
 enum NetworkError: Error {
+    case invaildRequest
     case httpError
     case unknownError(message: String)
 }
 
+protocol RequestProviding {
+    var request: URLRequest? { get }
+}
+
 protocol NetworkServiceType {
-    func request(urlRequest: URLRequest) -> AnyPublisher<Data, NetworkError>
+    func request(with provider: RequestProviding) -> AnyPublisher<Data, NetworkError>
 }
 
 final class NetworkService: NetworkServiceType {
@@ -24,8 +29,13 @@ final class NetworkService: NetworkServiceType {
         self.session = session
     }
     
-    func request(urlRequest: URLRequest) -> AnyPublisher<Data, NetworkError> {
-        session.dataTaskPublisher(for: urlRequest)
+    func request(with provider: RequestProviding) -> AnyPublisher<Data, NetworkError> {
+        guard let request = provider.request else {
+            return Fail(error: .invaildRequest)
+                .eraseToAnyPublisher()
+        }
+        
+        return session.dataTaskPublisher(for: request)
             .tryMap { data, response -> Data in
                 guard let httpResponse = response as? HTTPURLResponse,
                       (200...299).contains(httpResponse.statusCode) else {

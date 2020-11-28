@@ -11,15 +11,23 @@ import Combine
 
 final class NetworkServiceTests: XCTestCase {
     
+    struct MockSuccessRequest: RequestProviding {
+        var request: URLRequest? = URLRequest(url: URL(string: "https://h3rb9c0ugl.execute-api.ap-northeast-2.amazonaws.com/develop/baminchan/main")!)
+    }
+    
+    struct MockFailureRequest: RequestProviding {
+        var request: URLRequest? = URLRequest(url: URL(string: "test")!)
+    }
+    
     private var subscriptions: Set<AnyCancellable> = []
     
     func test_request_success() {
         let expectation = XCTestExpectation()
         defer { wait(for: [expectation], timeout: 3) }
         let network = NetworkService()
-        let request = URLRequest(url: URL(string: "https://h3rb9c0ugl.execute-api.ap-northeast-2.amazonaws.com/develop/baminchan/main")!)
+        let provider = MockSuccessRequest()
         
-        network.request(urlRequest: request)
+        network.request(with: provider)
             .sink { result in
                 switch result {
                 case .failure:
@@ -33,17 +41,39 @@ final class NetworkServiceTests: XCTestCase {
             .store(in: &subscriptions)
     }
     
-    func test_request_failure() {
+    func test_request_failure_with_invaildURL() {
         let expectation = XCTestExpectation()
         defer { wait(for: [expectation], timeout: 3) }
         let network = NetworkService()
-        let request = URLRequest(url: URL(string: "test")!)
+        let provider = MockFailureRequest()
         
-        network.request(urlRequest: request)
+        network.request(with: provider)
             .sink { result in
                 switch result {
                 case let .failure(error):
                     XCTAssertEqual(error, .unknownError(message: ""))
+                    expectation.fulfill()
+                case .finished:
+                    XCTFail("networking success")
+                }
+            } receiveValue: { _ in
+
+            }
+            .store(in: &subscriptions)
+    }
+    
+    func test_request_failure_with_invaildRequest() {
+        let expectation = XCTestExpectation()
+        defer { wait(for: [expectation], timeout: 3) }
+        let network = NetworkService()
+        var provider = MockFailureRequest()
+        provider.request = nil
+        
+        network.request(with: provider)
+            .sink { result in
+                switch result {
+                case let .failure(error):
+                    XCTAssertEqual(error, .invaildRequest)
                     expectation.fulfill()
                 case .finished:
                     XCTFail("networking success")

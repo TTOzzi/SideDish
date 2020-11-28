@@ -15,6 +15,8 @@ extension NetworkError: Equatable {
             return true
         case (.unknownError, .unknownError):
             return true
+        case (.invaildRequest, .invaildRequest):
+            return true
         default:
             return false
         }
