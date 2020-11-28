@@ -7,114 +7,26 @@
 
 import Foundation
 
-struct SideDish: Identifiable {
-    let id: UUID = UUID()
+struct SideDishResponse: Decodable {
+    let body: [SideDish]
+}
+
+struct SideDish: Decodable, Hashable {
     let detailHash: String
     let image: String
     let title: String
     let description: String
     let normalPrice: String?
     let salePrice: String
-    let badge: [String]
-}
-
-extension SideDish {
-    static let mockData = [
-        SideDish(
-            detailHash: "HBDEF",
-            image: "dish",
-            title: "[미노리키친] 규동 250g",
-            description: "일본인의 소울푸드! 한국인도 좋아하는 소고기덮밥",
-            normalPrice: "6,500",
-            salePrice: "7,000원",
-            badge: [
-                "론칭 특가",
-                "이벤트 특가"
-            ]
-        ),
-        SideDish(
-            detailHash: "HBDEF",
-            image: "dish",
-            title: "[미노리키친] 규동 250g",
-            description: "일본인의 소울푸드! 한국인도 좋아하는 소고기덮밥",
-            normalPrice: "6,500",
-            salePrice: "7,000원",
-            badge: [
-                "론칭 특가",
-                "이벤트 특가"
-            ]
-        ),
-        SideDish(
-            detailHash: "HBDEF",
-            image: "dish",
-            title: "[미노리키친] 규동 250g",
-            description: "일본인의 소울푸드! 한국인도 좋아하는 소고기덮밥",
-            normalPrice: "6,500",
-            salePrice: "7,000원",
-            badge: [
-                "론칭 특가",
-                "이벤트 특가"
-            ]
-        ),
-        SideDish(
-            detailHash: "HBDEF",
-            image: "dish",
-            title: "[미노리키친] 규동 250g",
-            description: "일본인의 소울푸드! 한국인도 좋아하는 소고기덮밥",
-            normalPrice: "6,500",
-            salePrice: "7,000원",
-            badge: [
-                "론칭 특가",
-                "이벤트 특가"
-            ]
-        ),
-        SideDish(
-            detailHash: "HBDEF",
-            image: "dish",
-            title: "[미노리키친] 규동 250g",
-            description: "일본인의 소울푸드! 한국인도 좋아하는 소고기덮밥",
-            normalPrice: "6,500",
-            salePrice: "7,000원",
-            badge: [
-                "론칭 특가",
-                "이벤트 특가"
-            ]
-        ),
-        SideDish(
-            detailHash: "HBDEF",
-            image: "dish",
-            title: "[미노리키친] 규동 250g",
-            description: "일본인의 소울푸드! 한국인도 좋아하는 소고기덮밥",
-            normalPrice: "6,500",
-            salePrice: "7,000원",
-            badge: [
-                "론칭 특가",
-                "이벤트 특가"
-            ]
-        ),
-        SideDish(
-            detailHash: "HBDEF",
-            image: "dish",
-            title: "[미노리키친] 규동 250g",
-            description: "일본인의 소울푸드! 한국인도 좋아하는 소고기덮밥",
-            normalPrice: "6,500",
-            salePrice: "7,000원",
-            badge: [
-                "론칭 특가",
-                "이벤트 특가"
-            ]
-        ),
-        SideDish(
-            detailHash: "HBDEF",
-            image: "dish",
-            title: "[미노리키친] 규동 250g",
-            description: "일본인의 소울푸드! 한국인도 좋아하는 소고기덮밥",
-            normalPrice: "6,500",
-            salePrice: "7,000원",
-            badge: [
-                "론칭 특가",
-                "이벤트 특가"
-            ]
-        )
-    ]
+    let badge: [String]?
+    
+    enum CodingKeys: String, CodingKey {
+        case detailHash = "detail_hash"
+        case image
+        case title
+        case description
+        case normalPrice = "n_price"
+        case salePrice = "s_price"
+        case badge
+    }
 }

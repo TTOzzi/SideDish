@@ -5,23 +5,26 @@
 //  Created by TTOzzi on 2020/11/28.
 //
 
+import Combine
 import SwiftUI
 
 struct SideDishList: View {
+    @ObservedObject var viewModel = SideDishListViewModel(useCase: SideDishUseCase(networkService: NetworkService()))
+    
     var body: some View {
         ScrollView {
             LazyVGrid(
                 columns: [.init()],
                 pinnedViews: [.sectionHeaders]
             ) {
-                ForEach(0..<3) { _ in
+                ForEach(viewModel.data) { section in
                     Section(
                         header: SideDishHeader(
-                            title: "언제 먹어도 든든한 밑반찬",
-                            category: "밑반찬"
+                            title: section.title,
+                            category: section.category
                         )
                     ) {
-                        ForEach(SideDish.mockData) { sideDish in
+                        ForEach(section.data, id: \.self) { sideDish in
                             SideDishRow(sideDish: sideDish)
                                 .id(UUID())
                         }
@@ -29,11 +32,15 @@ struct SideDishList: View {
                 }
             }
         }
+        .onAppear {
+            viewModel.send(event: .appear)
+        }
     }
 }
 
 struct SideDishList_Previews: PreviewProvider {
     static var previews: some View {
         SideDishList()
+            .paddingStatusBar()
     }
 }

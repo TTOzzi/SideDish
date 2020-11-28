@@ -41,7 +41,7 @@ struct SideDishRow: View {
                 }
                 
                 HStack {
-                    ForEach(sideDish.badge, id: \.self) { badge in
+                    ForEach(sideDish.badge ?? [], id: \.self) { badge in
                         Badge(title: badge, textColor: .white, backgroundColor: .purple)
                     }
                 }
@@ -55,6 +55,14 @@ struct SideDishRow: View {
 
 struct SideDishRow_Previews: PreviewProvider {
     static var previews: some View {
-        SideDishRow(sideDish: SideDish.mockData[0])
+        SideDishRow(sideDish: .init(
+                        detailHash: "HBDEF",
+                        image: "dish",
+                        title: "[미노리키친] 규동 250g", description: "일본인의 소울푸드! 한국인도 좋아하는 소고기덮밥",
+                        normalPrice: "7,000",
+                        salePrice: "6,500원",
+                        badge: ["이벤트특가", "론칭특가"])
+        )
+        .previewLayout(.fixed(width: 400, height: 120))
     }
 }
