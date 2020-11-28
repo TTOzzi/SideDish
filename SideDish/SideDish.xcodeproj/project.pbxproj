@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		44988C4D257225EF00B5ADD5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44988C4C257225EF00B5ADD5 /* NetworkService.swift */; };
+		44988C5625722ACC00B5ADD5 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44988C5525722ACC00B5ADD5 /* NetworkServiceTests.swift */; };
+		44988C6325722EAD00B5ADD5 /* NetworkError+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44988C6225722EAD00B5ADD5 /* NetworkError+Equatable.swift */; };
 		44BE6F182571FC4200BF8151 /* SideDishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BE6F172571FC4200BF8151 /* SideDishApp.swift */; };
 		44BE6F1C2571FC4300BF8151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44BE6F1B2571FC4300BF8151 /* Assets.xcassets */; };
 		44BE6F1F2571FC4300BF8151 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44BE6F1E2571FC4300BF8151 /* Preview Assets.xcassets */; };
@@ -21,8 +23,22 @@
 		44E4714E25721CE600FAB924 /* SideDishHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4714D25721CE600FAB924 /* SideDishHeader.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		44988C5825722ACC00B5ADD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44BE6F0C2571FC4200BF8151 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44BE6F132571FC4200BF8151;
+			remoteInfo = SideDish;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		44988C4C257225EF00B5ADD5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		44988C5325722ACC00B5ADD5 /* SideDishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SideDishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44988C5525722ACC00B5ADD5 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		44988C5725722ACC00B5ADD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44988C6225722EAD00B5ADD5 /* NetworkError+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkError+Equatable.swift"; sourceTree = "<group>"; };
 		44BE6F142571FC4200BF8151 /* SideDish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideDish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44BE6F172571FC4200BF8151 /* SideDishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishApp.swift; sourceTree = "<group>"; };
 		44BE6F1B2571FC4300BF8151 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +55,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		44988C5025722ACC00B5ADD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		44BE6F112571FC4200BF8151 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,10 +72,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44988C5425722ACC00B5ADD5 /* SideDishTests */ = {
+			isa = PBXGroup;
+			children = (
+				44988C5525722ACC00B5ADD5 /* NetworkServiceTests.swift */,
+				44988C6125722EA100B5ADD5 /* Extensions */,
+				44988C5725722ACC00B5ADD5 /* Info.plist */,
+			);
+			path = SideDishTests;
+			sourceTree = "<group>";
+		};
+		44988C6125722EA100B5ADD5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				44988C6225722EAD00B5ADD5 /* NetworkError+Equatable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		44BE6F0B2571FC4200BF8151 = {
 			isa = PBXGroup;
 			children = (
 				44BE6F162571FC4200BF8151 /* SideDish */,
+				44988C5425722ACC00B5ADD5 /* SideDishTests */,
 				44BE6F152571FC4200BF8151 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				44BE6F142571FC4200BF8151 /* SideDish.app */,
+				44988C5325722ACC00B5ADD5 /* SideDishTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +171,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		44988C5225722ACC00B5ADD5 /* SideDishTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44988C5A25722ACC00B5ADD5 /* Build configuration list for PBXNativeTarget "SideDishTests" */;
+			buildPhases = (
+				44988C4F25722ACC00B5ADD5 /* Sources */,
+				44988C5025722ACC00B5ADD5 /* Frameworks */,
+				44988C5125722ACC00B5ADD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44988C5925722ACC00B5ADD5 /* PBXTargetDependency */,
+			);
+			name = SideDishTests;
+			productName = SideDishTests;
+			productReference = 44988C5325722ACC00B5ADD5 /* SideDishTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		44BE6F132571FC4200BF8151 /* SideDish */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44BE6F232571FC4300BF8151 /* Build configuration list for PBXNativeTarget "SideDish" */;
@@ -154,6 +215,10 @@
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					44988C5225722ACC00B5ADD5 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 44BE6F132571FC4200BF8151;
+					};
 					44BE6F132571FC4200BF8151 = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -173,11 +238,19 @@
 			projectRoot = "";
 			targets = (
 				44BE6F132571FC4200BF8151 /* SideDish */,
+				44988C5225722ACC00B5ADD5 /* SideDishTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		44988C5125722ACC00B5ADD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		44BE6F122571FC4200BF8151 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,6 +263,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		44988C4F25722ACC00B5ADD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44988C6325722EAD00B5ADD5 /* NetworkError+Equatable.swift in Sources */,
+				44988C5625722ACC00B5ADD5 /* NetworkServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		44BE6F102571FC4200BF8151 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,7 +291,55 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		44988C5925722ACC00B5ADD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44BE6F132571FC4200BF8151 /* SideDish */;
+			targetProxy = 44988C5825722ACC00B5ADD5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		44988C5B25722ACC00B5ADD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3PWYBKFUK;
+				INFOPLIST_FILE = SideDishTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ttozzi.SideDishTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SideDish.app/SideDish";
+			};
+			name = Debug;
+		};
+		44988C5C25722ACC00B5ADD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3PWYBKFUK;
+				INFOPLIST_FILE = SideDishTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ttozzi.SideDishTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SideDish.app/SideDish";
+			};
+			name = Release;
+		};
 		44BE6F212571FC4300BF8151 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -373,6 +503,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		44988C5A25722ACC00B5ADD5 /* Build configuration list for PBXNativeTarget "SideDishTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44988C5B25722ACC00B5ADD5 /* Debug */,
+				44988C5C25722ACC00B5ADD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		44BE6F0F2571FC4200BF8151 /* Build configuration list for PBXProject "SideDish" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
