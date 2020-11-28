@@ -12,6 +12,7 @@
 		44BE6F1C2571FC4300BF8151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44BE6F1B2571FC4300BF8151 /* Assets.xcassets */; };
 		44BE6F1F2571FC4300BF8151 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44BE6F1E2571FC4300BF8151 /* Preview Assets.xcassets */; };
 		44BE6F2B2572035400BF8151 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BE6F2A2572035400BF8151 /* Badge.swift */; };
+		44BE6F322572066B00BF8151 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BE6F312572066B00BF8151 /* Color+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		44BE6F1E2571FC4300BF8151 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		44BE6F202571FC4300BF8151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44BE6F2A2572035400BF8151 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		44BE6F312572066B00BF8151 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				44BE6F172571FC4200BF8151 /* SideDishApp.swift */,
 				44BE6F192571FC4200BF8151 /* ContentView.swift */,
 				44BE6F2A2572035400BF8151 /* Badge.swift */,
+				44BE6F352572070500BF8151 /* Extensions */,
 				44BE6F1B2571FC4300BF8151 /* Assets.xcassets */,
 				44BE6F202571FC4300BF8151 /* Info.plist */,
 				44BE6F1D2571FC4300BF8151 /* Preview Content */,
@@ -70,6 +73,14 @@
 				44BE6F1E2571FC4300BF8151 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		44BE6F352572070500BF8151 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				44BE6F312572066B00BF8151 /* Color+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44BE6F1A2571FC4200BF8151 /* ContentView.swift in Sources */,
+				44BE6F322572066B00BF8151 /* Color+Extensions.swift in Sources */,
 				44BE6F2B2572035400BF8151 /* Badge.swift in Sources */,
 				44BE6F182571FC4200BF8151 /* SideDishApp.swift in Sources */,
 			);
