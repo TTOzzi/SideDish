@@ -17,6 +17,7 @@ struct SideDishRow: View {
                 .aspectRatio(1, contentMode: .fit)
                 .frame(width: 100)
                 .clipShape(Circle())
+                .padding(.horizontal)
             
             VStack(alignment: .leading) {
                 Text(sideDish.title)
@@ -48,6 +49,7 @@ struct SideDishRow: View {
             
             Spacer()
         }
+        .padding(.vertical)
     }
 }
 

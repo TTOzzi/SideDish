@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct SideDish {
+struct SideDish: Identifiable {
+    let id: UUID = UUID()
     let detailHash: String
     let image: String
     let title: String
@@ -18,8 +19,8 @@ struct SideDish {
 }
 
 extension SideDish {
-    static let mockData = [SideDish](
-        repeating: SideDish(
+    static let mockData = [
+        SideDish(
             detailHash: "HBDEF",
             image: "dish",
             title: "[미노리키친] 규동 250g",
@@ -31,6 +32,89 @@ extension SideDish {
                 "이벤트 특가"
             ]
         ),
-        count: 10
-    )
+        SideDish(
+            detailHash: "HBDEF",
+            image: "dish",
+            title: "[미노리키친] 규동 250g",
+            description: "일본인의 소울푸드! 한국인도 좋아하는 소고기덮밥",
+            normalPrice: "6,500",
+            salePrice: "7,000원",
+            badge: [
+                "론칭 특가",
+                "이벤트 특가"
+            ]
+        ),
+        SideDish(
+            detailHash: "HBDEF",
+            image: "dish",
+            title: "[미노리키친] 규동 250g",
+            description: "일본인의 소울푸드! 한국인도 좋아하는 소고기덮밥",
+            normalPrice: "6,500",
+            salePrice: "7,000원",
+            badge: [
+                "론칭 특가",
+                "이벤트 특가"
+            ]
+        ),
+        SideDish(
+            detailHash: "HBDEF",
+            image: "dish",
+            title: "[미노리키친] 규동 250g",
+            description: "일본인의 소울푸드! 한국인도 좋아하는 소고기덮밥",
+            normalPrice: "6,500",
+            salePrice: "7,000원",
+            badge: [
+                "론칭 특가",
+                "이벤트 특가"
+            ]
+        ),
+        SideDish(
+            detailHash: "HBDEF",
+            image: "dish",
+            title: "[미노리키친] 규동 250g",
+            description: "일본인의 소울푸드! 한국인도 좋아하는 소고기덮밥",
+            normalPrice: "6,500",
+            salePrice: "7,000원",
+            badge: [
+                "론칭 특가",
+                "이벤트 특가"
+            ]
+        ),
+        SideDish(
+            detailHash: "HBDEF",
+            image: "dish",
+            title: "[미노리키친] 규동 250g",
+            description: "일본인의 소울푸드! 한국인도 좋아하는 소고기덮밥",
+            normalPrice: "6,500",
+            salePrice: "7,000원",
+            badge: [
+                "론칭 특가",
+                "이벤트 특가"
+            ]
+        ),
+        SideDish(
+            detailHash: "HBDEF",
+            image: "dish",
+            title: "[미노리키친] 규동 250g",
+            description: "일본인의 소울푸드! 한국인도 좋아하는 소고기덮밥",
+            normalPrice: "6,500",
+            salePrice: "7,000원",
+            badge: [
+                "론칭 특가",
+                "이벤트 특가"
+            ]
+        ),
+        SideDish(
+            detailHash: "HBDEF",
+            image: "dish",
+            title: "[미노리키친] 규동 250g",
+            description: "일본인의 소울푸드! 한국인도 좋아하는 소고기덮밥",
+            normalPrice: "6,500",
+            salePrice: "7,000원",
+            badge: [
+                "론칭 특가",
+                "이벤트 특가"
+            ]
+        )
+    ]
 }
