@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		44BE6F282571FE4200BF8151 /* SideDishRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BE6F272571FE4200BF8151 /* SideDishRow.swift */; };
 		44BE6F2B2572035400BF8151 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BE6F2A2572035400BF8151 /* Badge.swift */; };
 		44BE6F322572066B00BF8151 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BE6F312572066B00BF8151 /* Color+Extensions.swift */; };
+		44E365802572786E00D49C58 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 44E3657F2572786E00D49C58 /* KingfisherSwiftUI */; };
 		44E47131257208BE00FAB924 /* TextModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E47130257208BE00FAB924 /* TextModifiers.swift */; };
 		44E4713525720C7B00FAB924 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4713425720C7B00FAB924 /* Font+Extensions.swift */; };
 		44E4713D25720EA500FAB924 /* SideDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4713C25720EA500FAB924 /* SideDish.swift */; };
@@ -74,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E365802572786E00D49C58 /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +216,9 @@
 			dependencies = (
 			);
 			name = SideDish;
+			packageProductDependencies = (
+				44E3657F2572786E00D49C58 /* KingfisherSwiftUI */,
+			);
 			productName = SideDish;
 			productReference = 44BE6F142571FC4200BF8151 /* SideDish.app */;
 			productType = "com.apple.product-type.application";
@@ -245,6 +250,9 @@
 				Base,
 			);
 			mainGroup = 44BE6F0B2571FC4200BF8151;
+			packageReferences = (
+				44E3657E2572786E00D49C58 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 44BE6F152571FC4200BF8151 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -547,6 +555,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		44E3657E2572786E00D49C58 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		44E3657F2572786E00D49C58 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44E3657E2572786E00D49C58 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 44BE6F0C2571FC4200BF8151 /* Project object */;
 }
