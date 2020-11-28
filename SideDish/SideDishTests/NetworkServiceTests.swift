@@ -10,15 +10,6 @@ import Combine
 @testable import SideDish
 
 final class NetworkServiceTests: XCTestCase {
-    
-    struct MockSuccessRequest: RequestProviding {
-        var request: URLRequest? = URLRequest(url: URL(string: "https://h3rb9c0ugl.execute-api.ap-northeast-2.amazonaws.com/develop/baminchan/main")!)
-    }
-    
-    struct MockFailureRequest: RequestProviding {
-        var request: URLRequest? = URLRequest(url: URL(string: "test")!)
-    }
-    
     private var subscriptions: Set<AnyCancellable> = []
     
     func test_request_success() {
