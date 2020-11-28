@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
 struct SideDishRow: View {
     let sideDish: SideDish
     
     var body: some View {
-        HStack {
-            Image(sideDish.image)
+        HStack(alignment: .top) {
+            KFImage(URL(string:sideDish.imageURL))
                 .resizable()
                 .aspectRatio(1, contentMode: .fit)
                 .frame(width: 100)
@@ -39,10 +40,11 @@ struct SideDishRow: View {
                         .foregroundColor(.keyColor)
                         .font(.rowTitle)
                 }
-                
-                HStack {
-                    ForEach(sideDish.badge ?? [], id: \.self) { badge in
-                        Badge(title: badge, textColor: .white, backgroundColor: .purple)
+                if let badges = sideDish.badge {
+                    HStack {
+                        ForEach(badges, id: \.self) { badge in
+                            Badge(title: badge, textColor: .white, backgroundColor: .purple)
+                        }
                     }
                 }
             }
@@ -57,7 +59,7 @@ struct SideDishRow_Previews: PreviewProvider {
     static var previews: some View {
         SideDishRow(sideDish: .init(
                         detailHash: "HBDEF",
-                        image: "dish",
+                        imageURL: "dish",
                         title: "[미노리키친] 규동 250g", description: "일본인의 소울푸드! 한국인도 좋아하는 소고기덮밥",
                         normalPrice: "7,000",
                         salePrice: "6,500원",

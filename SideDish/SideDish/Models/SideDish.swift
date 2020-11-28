@@ -13,7 +13,7 @@ struct SideDishResponse: Decodable {
 
 struct SideDish: Decodable, Hashable {
     let detailHash: String
-    let image: String
+    let imageURL: String
     let title: String
     let description: String
     let normalPrice: String?
@@ -22,7 +22,7 @@ struct SideDish: Decodable, Hashable {
     
     enum CodingKeys: String, CodingKey {
         case detailHash = "detail_hash"
-        case image
+        case imageURL = "image"
         case title
         case description
         case normalPrice = "n_price"
