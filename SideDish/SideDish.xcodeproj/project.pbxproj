@@ -40,6 +40,9 @@
 		44F81EE825737330000780D2 /* SideDishDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81EE725737330000780D2 /* SideDishDetailUseCase.swift */; };
 		44F81EEC257374C7000780D2 /* SideDishInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81EEB257374C7000780D2 /* SideDishInfo.swift */; };
 		44F81EF025737FEF000780D2 /* UseCaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81EEF25737FEF000780D2 /* UseCaseError.swift */; };
+		44F81EF425738080000780D2 /* SideDishInfoUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81EF325738080000780D2 /* SideDishInfoUseCaseTests.swift */; };
+		44F81EF82573822A000780D2 /* SideDishInfo+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81EF72573822A000780D2 /* SideDishInfo+Encodable.swift */; };
+		44F81EFC257382CE000780D2 /* SideDishInfo+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81EFB257382CE000780D2 /* SideDishInfo+Equatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,9 @@
 		44F81EE725737330000780D2 /* SideDishDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishDetailUseCase.swift; sourceTree = "<group>"; };
 		44F81EEB257374C7000780D2 /* SideDishInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishInfo.swift; sourceTree = "<group>"; };
 		44F81EEF25737FEF000780D2 /* UseCaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseError.swift; sourceTree = "<group>"; };
+		44F81EF325738080000780D2 /* SideDishInfoUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishInfoUseCaseTests.swift; sourceTree = "<group>"; };
+		44F81EF72573822A000780D2 /* SideDishInfo+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SideDishInfo+Encodable.swift"; sourceTree = "<group>"; };
+		44F81EFB257382CE000780D2 /* SideDishInfo+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SideDishInfo+Equatable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,7 @@
 		44988C5425722ACC00B5ADD5 /* SideDishTests */ = {
 			isa = PBXGroup;
 			children = (
+				44F81EF325738080000780D2 /* SideDishInfoUseCaseTests.swift */,
 				444FE3482572C188008D45EC /* SideDishViewModelTests.swift */,
 				444FE3312572B808008D45EC /* SideDishUseCaseTests.swift */,
 				44988C5525722ACC00B5ADD5 /* NetworkServiceTests.swift */,
@@ -138,6 +145,8 @@
 			children = (
 				44988C6225722EAD00B5ADD5 /* NetworkError+Equatable.swift */,
 				444FE3352572BFDD008D45EC /* SideDish+Encodable.swift */,
+				44F81EF72573822A000780D2 /* SideDishInfo+Encodable.swift */,
+				44F81EFB257382CE000780D2 /* SideDishInfo+Equatable.swift */,
 				444FE3392572C001008D45EC /* UseCaseError+Equatable.swift */,
 				444FE3502572C804008D45EC /* SideDishViewModel.State+Equatable.swift */,
 				444FE3542572C832008D45EC /* SideDishCategory+Equatable.swift */,
@@ -343,7 +352,10 @@
 				444FE3492572C188008D45EC /* SideDishViewModelTests.swift in Sources */,
 				44988C6325722EAD00B5ADD5 /* NetworkError+Equatable.swift in Sources */,
 				444FE3512572C804008D45EC /* SideDishViewModel.State+Equatable.swift in Sources */,
+				44F81EF82573822A000780D2 /* SideDishInfo+Encodable.swift in Sources */,
+				44F81EF425738080000780D2 /* SideDishInfoUseCaseTests.swift in Sources */,
 				444FE3322572B808008D45EC /* SideDishUseCaseTests.swift in Sources */,
+				44F81EFC257382CE000780D2 /* SideDishInfo+Equatable.swift in Sources */,
 				44988C5625722ACC00B5ADD5 /* NetworkServiceTests.swift in Sources */,
 				444FE3552572C832008D45EC /* SideDishCategory+Equatable.swift in Sources */,
 				444FE34D2572C7CB008D45EC /* MockSideDishUseCase.swift in Sources */,

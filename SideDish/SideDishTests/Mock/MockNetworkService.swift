@@ -9,8 +9,8 @@ import Combine
 import Foundation
 @testable import SideDish
 
-struct MockSuccessNetworkService: NetworkServiceType {
-    let response: SideDishResponse
+struct MockSuccessNetworkService<T: Codable>: NetworkServiceType {
+    let response: T
     
     func request(with provider: RequestProviding) -> AnyPublisher<Data, NetworkError> {
         let data = try! JSONEncoder().encode(response)
