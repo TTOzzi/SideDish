@@ -1,5 +1,5 @@
 //
-//  SideDishHome.swift
+//  SideDishMainView.swift
 //  SideDish
 //
 //  Created by TTOzzi on 2020/11/28.
@@ -8,7 +8,7 @@
 import Combine
 import SwiftUI
 
-struct SideDishHome: View {
+struct SideDishMainView: View {
     @ObservedObject var viewModel = SideDishViewModel()
     
     var body: some View {
@@ -36,8 +36,8 @@ struct SideDishHome: View {
     }
 }
 
-struct SideDishHome_Previews: PreviewProvider {
+struct SideDishMainView_Previews: PreviewProvider {
     static var previews: some View {
-        SideDishHome()
+        SideDishMainView()
     }
 }

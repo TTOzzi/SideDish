@@ -11,7 +11,7 @@ import SwiftUI
 struct SideDishApp: App {
     var body: some Scene {
         WindowGroup {
-            SideDishHome()
+            SideDishMainView()
         }
     }
 }

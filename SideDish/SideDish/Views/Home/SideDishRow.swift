@@ -35,7 +35,7 @@ struct SideDishRow: View {
                 if let badges = sideDish.badge {
                     HStack {
                         ForEach(badges, id: \.self) { badge in
-                            Badge(title: badge, textColor: .white, backgroundColor: .purple)
+                            BadgeView(title: badge, textColor: .white, backgroundColor: .purple)
                         }
                     }
                 }

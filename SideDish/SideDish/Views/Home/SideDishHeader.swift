@@ -16,7 +16,7 @@ struct SideDishHeader: View {
             Spacer()
             
             VStack {
-                Badge(title: category,
+                BadgeView(title: category,
                       textColor: .secondary,
                       backgroundColor: .white)
                     .border(Color.secondary, width: 1)
