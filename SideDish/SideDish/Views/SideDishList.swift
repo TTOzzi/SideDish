@@ -32,7 +32,7 @@ struct SideDishList: View {
         ) {
             ForEach(category.data, id: \.self) { sideDish in
                 NavigationLink(
-                    destination: SideDishDetail(),
+                    destination: SideDishDetail(viewModel: SideDishDetailViewModel(detailHash: sideDish.detailHash)),
                     label: {
                         SideDishRow(sideDish: sideDish)
                             .id(UUID())

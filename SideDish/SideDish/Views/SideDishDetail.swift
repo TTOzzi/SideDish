@@ -8,13 +8,37 @@
 import SwiftUI
 
 struct SideDishDetail: View {
+    init(viewModel: SideDishDetailViewModel) {
+        self.viewModel = viewModel
+        UIScrollView.appearance().bounces = false
+    }
+    
+    @ObservedObject private var viewModel: SideDishDetailViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        content
+            .navigationBarTitleDisplayMode(.inline)
+            .onAppear {
+                viewModel.send(event: .appear)
+            }
+    }
+    
+    var content: some View {
+        switch viewModel.state {
+        case .idle:
+            return AnyView(Color.clear)
+        case let .loaded(data):
+            return AnyView(SideDishDetailView(data: data))
+        case let .error(message):
+            return AnyView(Text(message))
+        }
     }
 }
 
 struct SideDishDetail_Previews: PreviewProvider {
     static var previews: some View {
-        SideDishDetail()
+        NavigationView {
+            SideDishDetail(viewModel: .init(detailHash: ""))
+        }
     }
 }

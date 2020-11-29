@@ -44,6 +44,7 @@
 		44F81EF82573822A000780D2 /* SideDishInfo+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81EF72573822A000780D2 /* SideDishInfo+Encodable.swift */; };
 		44F81EFC257382CE000780D2 /* SideDishInfo+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81EFB257382CE000780D2 /* SideDishInfo+Equatable.swift */; };
 		44F81F00257384F2000780D2 /* SideDishDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81EFF257384F2000780D2 /* SideDishDetailViewModel.swift */; };
+		44F81F0425739645000780D2 /* SideDishDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81F0325739645000780D2 /* SideDishDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		44F81EF72573822A000780D2 /* SideDishInfo+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SideDishInfo+Encodable.swift"; sourceTree = "<group>"; };
 		44F81EFB257382CE000780D2 /* SideDishInfo+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SideDishInfo+Equatable.swift"; sourceTree = "<group>"; };
 		44F81EFF257384F2000780D2 /* SideDishDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishDetailViewModel.swift; sourceTree = "<group>"; };
+		44F81F0325739645000780D2 /* SideDishDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 				44E4714D25721CE600FAB924 /* SideDishHeader.swift */,
 				44BE6F2A2572035400BF8151 /* Badge.swift */,
 				44F81EDD2573604C000780D2 /* SideDishDetail.swift */,
+				44F81F0325739645000780D2 /* SideDishDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				44988C4D257225EF00B5ADD5 /* NetworkService.swift in Sources */,
 				44DF73FB2572B24E001313A0 /* SideDishList.swift in Sources */,
 				44F81EE825737330000780D2 /* SideDishDetailUseCase.swift in Sources */,
+				44F81F0425739645000780D2 /* SideDishDetailView.swift in Sources */,
 				44E47144257211FC00FAB924 /* SideDishHome.swift in Sources */,
 				44F81F00257384F2000780D2 /* SideDishDetailViewModel.swift in Sources */,
 				44E47131257208BE00FAB924 /* TextModifiers.swift in Sources */,
