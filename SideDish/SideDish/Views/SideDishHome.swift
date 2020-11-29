@@ -15,6 +15,7 @@ struct SideDishHome: View {
         NavigationView {
             content
                 .navigationBarHidden(true)
+                .paddingStatusBar()
         }
         .onAppear {
             viewModel.send(event: .appear)
@@ -38,6 +39,5 @@ struct SideDishHome: View {
 struct SideDishHome_Previews: PreviewProvider {
     static var previews: some View {
         SideDishHome()
-            .paddingStatusBar()
     }
 }
