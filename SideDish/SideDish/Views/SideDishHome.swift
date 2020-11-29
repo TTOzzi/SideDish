@@ -12,7 +12,10 @@ struct SideDishHome: View {
     @ObservedObject var viewModel = SideDishViewModel()
     
     var body: some View {
-        content
+        NavigationView {
+            content
+                .navigationBarHidden(true)
+        }
         .onAppear {
             viewModel.send(event: .appear)
         }
