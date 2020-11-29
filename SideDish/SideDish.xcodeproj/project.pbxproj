@@ -45,6 +45,7 @@
 		44F81EFC257382CE000780D2 /* SideDishInfo+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81EFB257382CE000780D2 /* SideDishInfo+Equatable.swift */; };
 		44F81F00257384F2000780D2 /* SideDishDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81EFF257384F2000780D2 /* SideDishDetailViewModel.swift */; };
 		44F81F0425739645000780D2 /* SideDishDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81F0325739645000780D2 /* SideDishDetailView.swift */; };
+		44F81F0C2573AFB5000780D2 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81F0B2573AFB5000780D2 /* PriceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		44F81EFB257382CE000780D2 /* SideDishInfo+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SideDishInfo+Equatable.swift"; sourceTree = "<group>"; };
 		44F81EFF257384F2000780D2 /* SideDishDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishDetailViewModel.swift; sourceTree = "<group>"; };
 		44F81F0325739645000780D2 /* SideDishDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishDetailView.swift; sourceTree = "<group>"; };
+		44F81F0B2573AFB5000780D2 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				44BE6F272571FE4200BF8151 /* SideDishRow.swift */,
+				44F81F0B2573AFB5000780D2 /* PriceView.swift */,
 				44E47143257211FC00FAB924 /* SideDishHome.swift */,
 				44DF73FA2572B24E001313A0 /* SideDishList.swift */,
 				44E4714D25721CE600FAB924 /* SideDishHeader.swift */,
@@ -388,6 +391,7 @@
 				44BE6F2B2572035400BF8151 /* Badge.swift in Sources */,
 				44F81EF025737FEF000780D2 /* UseCaseError.swift in Sources */,
 				44BE6F282571FE4200BF8151 /* SideDishRow.swift in Sources */,
+				44F81F0C2573AFB5000780D2 /* PriceView.swift in Sources */,
 				44988C7525723D1100B5ADD5 /* SideDishViewModel.swift in Sources */,
 				44E4714E25721CE600FAB924 /* SideDishHeader.swift in Sources */,
 				44E4713D25720EA500FAB924 /* SideDish.swift in Sources */,

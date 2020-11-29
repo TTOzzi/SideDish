@@ -30,17 +30,8 @@ struct SideDishRow: View {
                     .subtitle()
                     .lineLimit(1)
                 
-                HStack {
-                    if let normalPrice = sideDish.normalPrice {
-                        Text(normalPrice)
-                            .strikethrough()
-                            .subtitle()
-                    }
-                        
-                    Text(sideDish.salePrice)
-                        .foregroundColor(.keyColor)
-                        .font(.rowTitle)
-                }
+                PriceView(normalPrice: sideDish.normalPrice,
+                          salePrice: sideDish.salePrice)
                 if let badges = sideDish.badge {
                     HStack {
                         ForEach(badges, id: \.self) { badge in
