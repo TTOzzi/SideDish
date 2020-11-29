@@ -45,6 +45,7 @@
 		44F81EFC257382CE000780D2 /* SideDishInfo+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81EFB257382CE000780D2 /* SideDishInfo+Equatable.swift */; };
 		44F81F00257384F2000780D2 /* SideDishDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81EFF257384F2000780D2 /* SideDishDetailViewModel.swift */; };
 		44F81F0425739645000780D2 /* SideDishDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81F0325739645000780D2 /* SideDishDetailView.swift */; };
+		44F81F082573AD78000780D2 /* SideDishInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81F072573AD78000780D2 /* SideDishInfoView.swift */; };
 		44F81F0C2573AFB5000780D2 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81F0B2573AFB5000780D2 /* PriceView.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,7 @@
 		44F81EFB257382CE000780D2 /* SideDishInfo+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SideDishInfo+Equatable.swift"; sourceTree = "<group>"; };
 		44F81EFF257384F2000780D2 /* SideDishDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishDetailViewModel.swift; sourceTree = "<group>"; };
 		44F81F0325739645000780D2 /* SideDishDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishDetailView.swift; sourceTree = "<group>"; };
+		44F81F072573AD78000780D2 /* SideDishInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishInfoView.swift; sourceTree = "<group>"; };
 		44F81F0B2573AFB5000780D2 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -246,6 +248,7 @@
 				44BE6F2A2572035400BF8151 /* Badge.swift */,
 				44F81EDD2573604C000780D2 /* SideDishDetail.swift */,
 				44F81F0325739645000780D2 /* SideDishDetailView.swift */,
+				44F81F072573AD78000780D2 /* SideDishInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				44BE6F2B2572035400BF8151 /* Badge.swift in Sources */,
 				44F81EF025737FEF000780D2 /* UseCaseError.swift in Sources */,
 				44BE6F282571FE4200BF8151 /* SideDishRow.swift in Sources */,
+				44F81F082573AD78000780D2 /* SideDishInfoView.swift in Sources */,
 				44F81F0C2573AFB5000780D2 /* PriceView.swift in Sources */,
 				44988C7525723D1100B5ADD5 /* SideDishViewModel.swift in Sources */,
 				44E4714E25721CE600FAB924 /* SideDishHeader.swift in Sources */,
