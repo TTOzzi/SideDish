@@ -25,7 +25,7 @@ final class SideDishUseCaseTests: XCTestCase {
                             badge: nil)]
         )
         let useCase = SideDishUseCase(networkService: MockSuccessNetworkService(response: response))
-        useCase.load(endPoint: .init(path: .main))
+        useCase.load(category: .main)
             .map(\.data)
             .sink { result in
                 switch result {
@@ -44,7 +44,7 @@ final class SideDishUseCaseTests: XCTestCase {
         let expectation = XCTestExpectation()
         defer { wait(for: [expectation], timeout: 3) }
         let useCase = SideDishUseCase(networkService: MockFailureNetworkService(response: nil))
-        useCase.load(endPoint: .init(path: .main))
+        useCase.load(category: .main)
             .sink { result in
                 switch result {
                 case let .failure(error):
@@ -63,7 +63,7 @@ final class SideDishUseCaseTests: XCTestCase {
         let expectation = XCTestExpectation()
         defer { wait(for: [expectation], timeout: 3) }
         let useCase = SideDishUseCase(networkService: MockFailureNetworkService(response: Data()))
-        useCase.load(endPoint: .init(path: .main))
+        useCase.load(category: .main)
             .sink { result in
                 switch result {
                 case let .failure(error):

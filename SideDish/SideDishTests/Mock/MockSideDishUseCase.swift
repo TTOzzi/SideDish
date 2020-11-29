@@ -11,7 +11,7 @@ import Combine
 struct MockSideDishUseCase: SideDishUseCaseType {
     let data: SideDishCategory
     
-    func load(endPoint: EndPoint) -> AnyPublisher<SideDishCategory, UseCaseError> {
+    func load(category: SideDishUseCase.Category) -> AnyPublisher<SideDishCategory, UseCaseError> {
         return Just(data)
             .setFailureType(to: UseCaseError.self)
             .eraseToAnyPublisher()
@@ -19,7 +19,7 @@ struct MockSideDishUseCase: SideDishUseCaseType {
 }
 
 struct MockSideDishErrorUseCase: SideDishUseCaseType {
-    func load(endPoint: EndPoint) -> AnyPublisher<SideDishCategory, UseCaseError> {
+    func load(category: SideDishUseCase.Category) -> AnyPublisher<SideDishCategory, UseCaseError> {
         return Fail(error: UseCaseError.decodeError)
             .eraseToAnyPublisher()
     }
