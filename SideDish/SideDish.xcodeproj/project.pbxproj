@@ -37,6 +37,7 @@
 		44E47144257211FC00FAB924 /* SideDishHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E47143257211FC00FAB924 /* SideDishHome.swift */; };
 		44E4714E25721CE600FAB924 /* SideDishHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4714D25721CE600FAB924 /* SideDishHeader.swift */; };
 		44F81EDE2573604C000780D2 /* SideDishDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81EDD2573604C000780D2 /* SideDishDetail.swift */; };
+		44F81EEC257374C7000780D2 /* SideDishInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81EEB257374C7000780D2 /* SideDishInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		44E47143257211FC00FAB924 /* SideDishHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishHome.swift; sourceTree = "<group>"; };
 		44E4714D25721CE600FAB924 /* SideDishHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishHeader.swift; sourceTree = "<group>"; };
 		44F81EDD2573604C000780D2 /* SideDishDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishDetail.swift; sourceTree = "<group>"; };
+		44F81EEB257374C7000780D2 /* SideDishInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 				44988C6825722FEE00B5ADD5 /* SideDishUseCase.swift */,
 				44988C6C2572353800B5ADD5 /* EndPoint.swift */,
 				44988C7425723D1100B5ADD5 /* SideDishViewModel.swift */,
+				44F81EEB257374C7000780D2 /* SideDishInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				44E47144257211FC00FAB924 /* SideDishHome.swift in Sources */,
 				44E47131257208BE00FAB924 /* TextModifiers.swift in Sources */,
 				44BE6F322572066B00BF8151 /* Color+Extensions.swift in Sources */,
+				44F81EEC257374C7000780D2 /* SideDishInfo.swift in Sources */,
 				44988C6925722FEE00B5ADD5 /* SideDishUseCase.swift in Sources */,
 				44E4713525720C7B00FAB924 /* Font+Extensions.swift in Sources */,
 				44988C6D2572353800B5ADD5 /* EndPoint.swift in Sources */,
