@@ -37,9 +37,9 @@ final class SideDishViewModel: ObservableObject {
     
     private func load() {
         loadSubscription = [
-            useCase.load(endPoint: .init(path: .main)),
-            useCase.load(endPoint: .init(path: .soup)),
-            useCase.load(endPoint: .init(path: .side))
+            useCase.load(category: .main),
+            useCase.load(category: .soup),
+            useCase.load(category: .side)
         ]
         .publisher
         .flatMap(maxPublishers: .max(1)) { $0 }

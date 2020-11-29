@@ -14,7 +14,7 @@ enum UseCaseError: Error {
 }
 
 protocol SideDishUseCaseType {
-    func load(endPoint: EndPoint) -> AnyPublisher<SideDishCategory, UseCaseError>
+    func load(category: SideDishUseCase.Category) -> AnyPublisher<SideDishCategory, UseCaseError>
 }
 
 struct SideDishCategory: Identifiable {
@@ -25,19 +25,47 @@ struct SideDishCategory: Identifiable {
 }
 
 struct SideDishUseCase: SideDishUseCaseType {
+    enum Category {
+        case main
+        case soup
+        case side
+        
+        var keyword: String {
+            switch self {
+            case .main:
+                return "메인요리"
+            case .soup:
+                return "국•찌개"
+            case .side:
+                return "밑반찬"
+            }
+        }
+        
+        var title: String {
+            switch self {
+            case .main:
+                return "한그릇 뚝딱 메인 요리"
+            case .soup:
+                return "김이 모락모락 국, 찌개"
+            case .side:
+                return "언제 먹어도 든든한 밑반찬"
+            }
+        }
+    }
+    
     private let networkService: NetworkServiceType
     
     init(networkService: NetworkServiceType = NetworkService()) {
         self.networkService = networkService
     }
     
-    func load(endPoint: EndPoint) -> AnyPublisher<SideDishCategory, UseCaseError> {
+    func load(category: Category) -> AnyPublisher<SideDishCategory, UseCaseError> {
         return networkService
-            .request(with: endPoint)
+            .request(with: endPoint(for: category))
             .decode(type: SideDishResponse.self, decoder: JSONDecoder())
             .map {
-                SideDishCategory(keyword: endPoint.path.keyword,
-                                title: endPoint.path.title,
+                SideDishCategory(keyword: category.keyword,
+                                title: category.title,
                                 data: $0.body)
             }
             .mapError{ error -> UseCaseError in
@@ -49,5 +77,16 @@ struct SideDishUseCase: SideDishUseCaseType {
             }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
+    }
+    
+    private func endPoint(for category: Category) -> EndPoint {
+        switch category {
+        case .main:
+            return EndPoint(path: .main)
+        case .soup:
+            return EndPoint(path: .soup)
+        case .side:
+            return EndPoint(path: .side)
+        }
     }
 }
