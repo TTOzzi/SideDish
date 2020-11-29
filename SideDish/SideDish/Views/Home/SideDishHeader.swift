@@ -22,7 +22,7 @@ struct SideDishHeader: View {
                     .border(Color.secondary, width: 1)
                 
                 Text(title)
-                    .font(.system(size: 20, weight: .bold))
+                    .font(.system(size: 18, weight: .bold))
             }
             
             Spacer()

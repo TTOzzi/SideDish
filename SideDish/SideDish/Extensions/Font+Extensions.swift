@@ -9,6 +9,6 @@ import SwiftUI
 
 extension Font {
     static var rowTitle: Font {
-        .system(size: 17, weight: .bold)
+        .system(size: 15, weight: .bold)
     }
 }

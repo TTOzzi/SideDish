@@ -20,7 +20,8 @@ struct SideDishRow: View {
                 .clipShape(Circle())
                 .padding(.horizontal)
             
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading,
+                   spacing: 2) {
                 Text(sideDish.title)
                     .foregroundColor(.black)
                     .font(.rowTitle)

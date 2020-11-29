@@ -42,10 +42,11 @@ struct SideDishDetailView: View {
                 VStack {
                     PagingView(imageURLs: data.thumbImages)
                         .frame(width: proxy.size.width,
-                               height: proxy.size.height * 0.25)
+                               height: proxy.size.height * 0.3)
                     SideDishInfoView(title: title,
                                      info: data)
-                        .padding(.horizontal)
+                        .padding(.horizontal, 6)
+                        .padding(.top, 4)
                     ForEach(data.detailImages, id: \.self) { image in
                         KFImage(URL(string: image))
                             .resizable()

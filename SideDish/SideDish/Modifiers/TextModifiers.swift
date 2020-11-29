@@ -11,7 +11,7 @@ struct Subtitle: ViewModifier {
     func body(content: Content) -> some View {
         content
             .foregroundColor(.secondary)
-            .font(.system(size: 14))
+            .font(.system(size: 12))
     }
 }
 

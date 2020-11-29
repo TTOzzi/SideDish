@@ -12,24 +12,24 @@ struct SideDishInfoView: View {
     let info: SideDishInfo
     
     var body: some View {
-        let padding: CGFloat = 12
+        let padding: CGFloat = 8
         VStack(alignment: .leading) {
             VStack(alignment: .leading,
-                   spacing: 4) {
+                   spacing: 6) {
                 Text(title)
-                    .font(.system(size: 20, weight: .bold))
+                    .font(.system(size: 17, weight: .bold))
                 Text(info.description)
-                    .font(.system(size: 16))
+                    .font(.system(size: 14))
             }
             .padding(.horizontal, padding)
             Rectangle()
                 .foregroundColor(Color.gray.opacity(0.3))
-                .frame(height: 4)
+                .frame(height: 2)
             VStack(alignment: .leading,
                    spacing: 6) {
                 HStack {
                     Text("가격")
-                        .font(.system(size: 18))
+                        .font(.system(size: 15))
                     Spacer()
                     if !info.prices.isEmpty {
                         PriceView(normalPrice: info.prices.count > 1 ? info.prices.first : nil,
@@ -49,7 +49,7 @@ struct SideDishInfoView: View {
                                  _ description: String) -> some View {
         HStack {
             Text(title)
-                .font(.system(size: 18))
+                .font(.system(size: 15))
                 .frame(minWidth: 80, alignment: .leading)
             Text(description)
                 .subtitle()

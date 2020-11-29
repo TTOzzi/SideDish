@@ -12,7 +12,7 @@ struct PriceView: View {
     let salePrice: String
     
     var body: some View {
-        HStack {
+        HStack(alignment: .lastTextBaseline) {
             if let normalPrice = normalPrice {
                 Text(normalPrice)
                     .strikethrough()
