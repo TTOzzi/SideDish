@@ -15,17 +15,19 @@ final class SideDishDetailViewModel: ObservableObject {
     
     enum State {
         case idle
-        case loaded(data: SideDishInfo)
+        case loaded(title: String, data: SideDishInfo)
         case error(message: String)
     }
     
     private var subscription: AnyCancellable?
+    private let title: String
     private let detailHash: String
     private let useCase: SideDishDetailUseCaseType
     @Published private(set) var state = State.idle
     
-    init(detailHash: String, useCase: SideDishDetailUseCaseType = SideDishDetailUseCase()) {
-        self.detailHash = detailHash
+    init(sideDish: SideDish, useCase: SideDishDetailUseCaseType = SideDishDetailUseCase()) {
+        title = sideDish.title
+        detailHash = sideDish.detailHash
         self.useCase = useCase
     }
     
@@ -43,7 +45,8 @@ final class SideDishDetailViewModel: ObservableObject {
                 self?.state = .error(message: error.localizedDescription)
             },
             receiveValue: { [weak self] data in
-                self?.state = .loaded(data: data)
+                guard let self = self else { return }
+                self.state = .loaded(title: self.title, data: data)
             })
     }
 }

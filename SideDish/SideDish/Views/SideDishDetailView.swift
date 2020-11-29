@@ -9,31 +9,46 @@ import SwiftUI
 import KingfisherSwiftUI
 
 struct SideDishDetailView: View {
+    let title: String
     let data: SideDishInfo
     
     var body: some View {
         GeometryReader { proxy in
-            VStack {
-                TabView {
-                    ForEach(data.thumbImages, id: \.self) { image in
+            ScrollView {
+                VStack {
+                    PagingView(imageURLs: data.thumbImages)
+                        .frame(width: proxy.size.width,
+                               height: proxy.size.height * 0.25)
+                    SideDishInfoView(title: title,
+                                     info: data)
+                        .padding(.horizontal)
+                    ForEach(data.detailImages, id: \.self) { image in
                         KFImage(URL(string: image))
                             .resizable()
                             .scaledToFill()
-                            .frame(width: proxy.size.width,
-                                   height: proxy.size.height * 0.3)
+                            .frame(width: proxy.size.width)
                     }
                 }
-                .frame(width: proxy.size.width,
-                       height: proxy.size.height * 0.3)
             }
-            .tabViewStyle(PageTabViewStyle())
         }
     }
 }
 
-
-struct SideDishDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        SideDishDetailView(data: .init(thumbImages: [], description: "", point: "", deliveryInfo: "", deliveryFee: "", prices: [], detailImages: []))
+struct PagingView: View {
+    let imageURLs: [String]
+    
+    var body: some View {
+        GeometryReader { proxy in
+            TabView {
+                ForEach(imageURLs, id: \.self) { image in
+                    KFImage(URL(string: image))
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: proxy.size.width,
+                               height: proxy.size.height)
+                }
+            }
+            .tabViewStyle(PageTabViewStyle())
+        }
     }
 }

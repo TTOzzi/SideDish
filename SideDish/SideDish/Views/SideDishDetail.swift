@@ -27,8 +27,8 @@ struct SideDishDetail: View {
         switch viewModel.state {
         case .idle:
             return AnyView(Color.clear)
-        case let .loaded(data):
-            return AnyView(SideDishDetailView(data: data))
+        case let .loaded(title, data):
+            return AnyView(SideDishDetailView(title: title, data: data))
         case let .error(message):
             return AnyView(Text(message))
         }
@@ -38,7 +38,8 @@ struct SideDishDetail: View {
 struct SideDishDetail_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            SideDishDetail(viewModel: .init(detailHash: ""))
+            SideDishDetail(
+                viewModel: .init(sideDish: SideDish(detailHash: "HBDEF", imageURL: "", title: "", description: "", normalPrice: nil, salePrice: "", badge: nil)))
         }
     }
 }
