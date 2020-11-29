@@ -8,11 +8,6 @@
 import Combine
 import Foundation
 
-enum UseCaseError: Error {
-    case decodeError
-    case networkError(message: String)
-}
-
 protocol SideDishUseCaseType {
     func load(category: SideDishUseCase.Category) -> AnyPublisher<SideDishCategory, UseCaseError>
 }

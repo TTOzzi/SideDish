@@ -37,7 +37,9 @@
 		44E47144257211FC00FAB924 /* SideDishHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E47143257211FC00FAB924 /* SideDishHome.swift */; };
 		44E4714E25721CE600FAB924 /* SideDishHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4714D25721CE600FAB924 /* SideDishHeader.swift */; };
 		44F81EDE2573604C000780D2 /* SideDishDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81EDD2573604C000780D2 /* SideDishDetail.swift */; };
+		44F81EE825737330000780D2 /* SideDishDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81EE725737330000780D2 /* SideDishDetailUseCase.swift */; };
 		44F81EEC257374C7000780D2 /* SideDishInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81EEB257374C7000780D2 /* SideDishInfo.swift */; };
+		44F81EF025737FEF000780D2 /* UseCaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F81EEF25737FEF000780D2 /* UseCaseError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +86,9 @@
 		44E47143257211FC00FAB924 /* SideDishHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishHome.swift; sourceTree = "<group>"; };
 		44E4714D25721CE600FAB924 /* SideDishHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishHeader.swift; sourceTree = "<group>"; };
 		44F81EDD2573604C000780D2 /* SideDishDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishDetail.swift; sourceTree = "<group>"; };
+		44F81EE725737330000780D2 /* SideDishDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishDetailUseCase.swift; sourceTree = "<group>"; };
 		44F81EEB257374C7000780D2 /* SideDishInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishInfo.swift; sourceTree = "<group>"; };
+		44F81EEF25737FEF000780D2 /* UseCaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,9 +209,11 @@
 			children = (
 				44E4713C25720EA500FAB924 /* SideDish.swift */,
 				44988C4C257225EF00B5ADD5 /* NetworkService.swift */,
+				44F81EEF25737FEF000780D2 /* UseCaseError.swift */,
 				44988C6825722FEE00B5ADD5 /* SideDishUseCase.swift */,
 				44988C6C2572353800B5ADD5 /* EndPoint.swift */,
 				44988C7425723D1100B5ADD5 /* SideDishViewModel.swift */,
+				44F81EE725737330000780D2 /* SideDishDetailUseCase.swift */,
 				44F81EEB257374C7000780D2 /* SideDishInfo.swift */,
 			);
 			path = Models;
@@ -351,6 +357,7 @@
 			files = (
 				44988C4D257225EF00B5ADD5 /* NetworkService.swift in Sources */,
 				44DF73FB2572B24E001313A0 /* SideDishList.swift in Sources */,
+				44F81EE825737330000780D2 /* SideDishDetailUseCase.swift in Sources */,
 				44E47144257211FC00FAB924 /* SideDishHome.swift in Sources */,
 				44E47131257208BE00FAB924 /* TextModifiers.swift in Sources */,
 				44BE6F322572066B00BF8151 /* Color+Extensions.swift in Sources */,
@@ -359,6 +366,7 @@
 				44E4713525720C7B00FAB924 /* Font+Extensions.swift in Sources */,
 				44988C6D2572353800B5ADD5 /* EndPoint.swift in Sources */,
 				44BE6F2B2572035400BF8151 /* Badge.swift in Sources */,
+				44F81EF025737FEF000780D2 /* UseCaseError.swift in Sources */,
 				44BE6F282571FE4200BF8151 /* SideDishRow.swift in Sources */,
 				44988C7525723D1100B5ADD5 /* SideDishViewModel.swift in Sources */,
 				44E4714E25721CE600FAB924 /* SideDishHeader.swift in Sources */,

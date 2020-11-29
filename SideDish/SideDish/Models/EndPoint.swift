@@ -12,6 +12,7 @@ struct EndPoint: RequestProviding {
         case main
         case soup
         case side
+        case detail(hash: String)
         
         var description: String {
             switch self {
@@ -21,6 +22,8 @@ struct EndPoint: RequestProviding {
                 return "/soup"
             case .side:
                 return "/side"
+            case let .detail(hash):
+                return "/detail/\(hash)"
             }
         }
     }
