@@ -12,7 +12,7 @@ protocol SideDishDetailUseCaseType {
     func load(detailHash: String) -> AnyPublisher<SideDishInfo, UseCaseError>
 }
 
-struct SideDishDetailUseCase {
+struct SideDishDetailUseCase: SideDishDetailUseCaseType {
     private let networkService: NetworkServiceType
     
     init(networkService: NetworkServiceType = NetworkService()) {
