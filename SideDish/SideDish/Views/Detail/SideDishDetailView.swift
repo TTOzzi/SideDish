@@ -13,6 +13,7 @@ struct SideDishDetailView: View {
         self.viewModel = viewModel
         UIScrollView.appearance().bounces = false
         UINavigationBar.appearance().backgroundColor = .white
+        UINavigationBar.appearance().tintColor = .black
     }
     
     @ObservedObject private var viewModel: SideDishDetailViewModel
