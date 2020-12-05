@@ -25,14 +25,15 @@ struct SideDishDetailView: View {
             }
     }
     
+    @ViewBuilder
     var content: some View {
         switch viewModel.state {
         case .idle:
-            return AnyView(Color.clear)
+            Color.clear
         case let .loaded(title, data):
-            return AnyView(detailView(title: title, data: data))
+            detailView(title: title, data: data)
         case let .error(message):
-            return AnyView(Text(message))
+            Text(message)
         }
     }
     

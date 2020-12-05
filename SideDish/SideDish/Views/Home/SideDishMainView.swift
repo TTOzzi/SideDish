@@ -22,16 +22,17 @@ struct SideDishMainView: View {
         }
     }
     
+    @ViewBuilder
     private var content: some View {
         switch viewModel.state {
         case .idle:
-            return AnyView(Color.clear)
+            Color.clear
         case let .loading(data):
-            return AnyView(SideDishList(data: data))
+            SideDishList(data: data)
         case let .loaded(data):
-            return AnyView(SideDishList(data: data))
+            SideDishList(data: data)
         case let .error(message):
-            return AnyView(Text(message))
+            Text(message)
         }
     }
 }
