@@ -6,15 +6,13 @@
 //
 
 import SwiftUI
-import KingfisherSwiftUI
 
 struct SideDishRow: View {
     let sideDish: SideDish
     
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
-            KFImage(URL(string:sideDish.imageURL))
-                .resizable()
+            LoadableImage(urlString: sideDish.imageURL)
                 .aspectRatio(1, contentMode: .fit)
                 .frame(width: 100)
                 .clipShape(Circle())

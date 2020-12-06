@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import KingfisherSwiftUI
 
 struct SideDishDetailView: View {
     init(viewModel: SideDishDetailViewModel) {
@@ -50,8 +49,7 @@ struct SideDishDetailView: View {
                         .padding(.horizontal, 6)
                         .padding(.top, 4)
                     ForEach(data.detailImages, id: \.self) { image in
-                        KFImage(URL(string: image))
-                            .resizable()
+                        LoadableImage(urlString: image)
                             .scaledToFill()
                             .frame(width: proxy.size.width)
                     }

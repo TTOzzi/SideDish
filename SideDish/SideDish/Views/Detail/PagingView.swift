@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import KingfisherSwiftUI
 
 struct PagingView: View {
     let imageURLs: [String]
@@ -15,8 +14,7 @@ struct PagingView: View {
         GeometryReader { proxy in
             TabView {
                 ForEach(imageURLs, id: \.self) { image in
-                    KFImage(URL(string: image))
-                        .resizable()
+                    LoadableImage(urlString: image)
                         .scaledToFill()
                         .frame(width: proxy.size.width,
                                height: proxy.size.height)
